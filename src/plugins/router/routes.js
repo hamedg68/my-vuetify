@@ -15,6 +15,12 @@ export const Routes = [
         component: () => import('@/views/About'),
     },
 
+    {
+        path: '/test',
+        name: 'test',
+        component: () => import('@/views/test'),
+    },
+
 
     // {
     //     name : '404',
