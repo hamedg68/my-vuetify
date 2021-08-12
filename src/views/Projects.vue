@@ -1,17 +1,14 @@
 <template>
-  <div class="home">
-
+  <div class="projects">
+    <h1 class="subtitle-1 grey--text">Projects</h1>
 
   </div>
 </template>
 
 <script>
 
-
 export default {
-  name: "Home",
-  components:{
-   }
+  name: "Projects"
 }
 </script>
 

@@ -1,18 +1,25 @@
-import Home from '@/views/Home'
-
+import Dashboard from "@/views/Dashboard";
+import Projects from "@/views/Projects";
+import Team from "@/views/Team";
 
 export const Routes = [
 
     {
         path: '/',
-        name: 'home',
-        component: Home,
+        name: 'dashboard',
+        component: Dashboard,
     },
 
     {
-        path: '/about',
-        name: 'about',
-        component: () => import('@/views/About'),
+        path: '/projects',
+        name: 'projects',
+        component: Projects,
+    },
+
+    {
+        path: '/team',
+        name: 'Team',
+        component: Team,
     },
 
     {

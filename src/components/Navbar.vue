@@ -12,12 +12,19 @@
         <span>Sign out</span>
         <v-icon right>mdi-exit-to-app</v-icon>
       </v-btn>
-
-
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" class="primary" app>
-      <p class="info">test</p>
+      <v-list nav dense>
+      <v-list-item-group active-class="deep-purple--text text--accent-4">
+        <v-list-item v-for="(link,index) in links" :key="index" :to="link.route">
+          <v-list-item-icon>
+            <v-icon class="white--text">{{link.icon}}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title class="white--text">{{link.text}}</v-list-item-title>
+        </v-list-item>
+      </v-list-item-group>
+      </v-list>
     </v-navigation-drawer>
   </nav>
 </template>
@@ -28,6 +35,11 @@ export default {
   data() {
     return {
       drawer: false,
+      links:[
+        {icon:'mdi-view-dashboard', text:'Dashboard',route: '/'},
+        {icon:'mdi-folder', text:'My Projects',route: '/projects'},
+        {icon:'mdi-account-group', text:'Team',route: '/team'},
+      ]
     }
   }
 }
