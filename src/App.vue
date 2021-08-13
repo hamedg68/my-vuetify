@@ -1,11 +1,14 @@
 <template>
-  <v-app>
+  <v-app >
+  <div class="grey lighten-4" style="min-height: 100vh">
+
 
     <Navbar></Navbar>
 
-    <v-main class="mx-4 mb-4">
+    <v-main  class="mx-4 mb-4">
       <router-view></router-view>
     </v-main>
+  </div>
 
   </v-app>
 </template>
@@ -26,3 +29,10 @@ export default {
   }),
 };
 </script>
+
+<style>
+.m-app{
+  min-height: 100vh;
+  background: blue;
+}
+</style>

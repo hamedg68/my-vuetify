@@ -59,6 +59,30 @@
     <v-btn dark class="red hidden-md-and-down">hidden-md-and-down</v-btn>
     <v-btn dark class="green hidden-md-and-up">hidden-md-and-up</v-btn>
     <v-btn dark class="brown hidden-sm-only">hidden-sm-only</v-btn>
+
+    <v-row no-gutters>
+      <v-col cols="12" sm="6">
+        <v-btn outlined block color="primary">1</v-btn>
+      </v-col>
+      <v-col cols="4" sm="2">
+        <v-btn outlined block color="primary">2</v-btn>
+      </v-col>
+      <v-col cols="4" sm="2">
+        <v-btn outlined block color="primary">2</v-btn>
+      </v-col>
+      <v-col cols="4" sm="2">
+        <v-btn outlined block color="primary">2</v-btn>
+      </v-col>
+    </v-row>
+
+    <v-row no-gutters justify="space-around">
+      <v-col cols="4" md="3">
+        <v-btn outlined block color="primary">1</v-btn>
+      </v-col>
+      <v-col cols="4" md="3">
+        <v-btn outlined block color="primary">2</v-btn>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
