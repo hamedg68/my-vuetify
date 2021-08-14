@@ -36,7 +36,7 @@
 </template>
 <script>
 
-import moment from 'moment'
+import momentJalali from 'moment-jalaali'
 
 export default {
   name: "Popup",
@@ -62,7 +62,7 @@ export default {
   },
   computed: {
     formattedDate() {
-      return this.dueDate ? moment(this.dueDate).format('YYYY/MM/DD') : ''
+      return this.dueDate ? momentJalali(this.dueDate).format('jYYYY/jMM/jDD') : ''
     },
   },
   watch: {
@@ -71,12 +71,17 @@ export default {
         setTimeout(() => {
               this.dialog = false
               this.loading = false
+              this.$emit('projectAdded')
               this.title = ''
               this.content = ''
               this.dueDate = ''
             }
             , 3000)
     },
+    dialog() {
+      if (this.$refs.form)
+        this.$refs.form.resetValidation()
+    }
   },
 }
 </script>

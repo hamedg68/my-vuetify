@@ -1,6 +1,6 @@
 <template>
   <v-app >
-  <div class="grey lighten-4" style="min-height: 100vh">
+  <v-layout class="grey lighten-4" style="min-height: 100vh">
 
 
     <Navbar></Navbar>
@@ -8,7 +8,7 @@
     <v-main  class="mx-4 mb-4">
       <router-view></router-view>
     </v-main>
-  </div>
+  </v-layout>
 
   </v-app>
 </template>

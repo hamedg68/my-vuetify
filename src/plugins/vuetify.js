@@ -2,8 +2,10 @@ import Vue from 'vue';
 import Vuetify from 'vuetify/lib/framework';
 
 Vue.use(Vuetify);
+import fa from 'vuetify/lib/locale/fa'
 
 export default new Vuetify({
+    rtl: true,
     theme: {
         themes: {
             light: {
@@ -13,5 +15,9 @@ export default new Vuetify({
                 error: '#f83e70',
             },
         },
+    },
+    lang: {
+        locales: { fa },
+        current: 'fa',
     },
 });
