@@ -1,5 +1,5 @@
 <template>
-  <v-app >
+  <v-app>
   <v-layout class="grey lighten-4" style="min-height: 100vh">
 
 
@@ -30,9 +30,9 @@ export default {
 };
 </script>
 
-<style>
-.m-app{
-  min-height: 100vh;
-  background: blue;
-}
+<style lang="scss">
+
+@import "~@/assets/sass/variables";
+
+
 </style>

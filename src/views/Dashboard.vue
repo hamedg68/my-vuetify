@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <h1 class="subtitle-1 grey--text">Dashboard</h1>
+    <h1 class="subtitle-1 grey--text">داشبورد</h1>
     <v-container class="my-5">
 
       <v-row class="mb-3 ml-0">
@@ -9,20 +9,20 @@
           <template v-slot:activator="{ on, attrs }">
             <v-btn small text depressed color="grey white--text" @click="sortBy('title')" v-bind="attrs" v-on="on">
               <v-icon left small>mdi-folder</v-icon>
-              <span class="caption text-lowercase">By project name</span>
+              <span class="caption text-lowercase">بر اساس پروژه</span>
             </v-btn>
           </template>
-          <span>sort projects by project name</span>
+          <span>مرتب سازی بر اساس نام پروژه</span>
         </v-tooltip>
 
         <v-tooltip top>
           <template v-slot:activator="{ on, attrs }">
             <v-btn small text depressed color="grey white--text" class="ml-1" @click="sortBy('person')" v-bind="attrs" v-on="on">
               <v-icon left small>mdi-account</v-icon>
-              <span class="caption text-lowercase">By person</span>
+              <span class="caption text-lowercase">بر اساس نام</span>
             </v-btn>
           </template>
-          <span>sort projects by person name</span>
+          <span>مرتب سازی بر اساس نام شخص</span>
         </v-tooltip>
       </v-row>
 
@@ -45,7 +45,7 @@
           </v-col>
 
           <v-col cols="6" sm="4" md="2" class="text-right">
-            <v-chip small class="caption my-2 white--text" :class="`${project.status}`">{{ project.status }}</v-chip>
+            <v-chip small class="caption my-2 white--text" :class="`${project.status}`">{{ project.statusFa }}</v-chip>
           </v-col>
         </v-row>
 
@@ -66,10 +66,12 @@ export default {
     return {
       projects: [
         {
-          title: 'Design a new website',
-          person: 'The Net Ninja',
-          due: '1st Jan 2019',
+          title: 'طراحی وب سایت جدید',
+          person: 'حامد گرجی',
+          due: '۱۴۰۰/۰۵/۱۴',
           status: 'ongoing',
+          statusFa: 'در حال انجام',
+          statusID: 0,
           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'
         },
         {
@@ -77,6 +79,8 @@ export default {
           person: 'Chun Li',
           due: '10th Jan 2019',
           status: 'complete',
+          statusFa: 'انجام شده',
+          statusID: 1,
           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'
         },
         {
@@ -84,6 +88,8 @@ export default {
           person: 'Ryu',
           due: '20th Dec 2018',
           status: 'complete',
+          statusFa: 'انجام شده',
+          statusID: 1,
           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'
         },
         {
@@ -91,6 +97,8 @@ export default {
           person: 'Gouken',
           due: '20th Oct 2018',
           status: 'overdue',
+          statusFa: 'انجام نشده',
+          statusID: 2,
           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'
         },
       ]

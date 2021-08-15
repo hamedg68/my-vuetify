@@ -1,6 +1,6 @@
 <template>
   <div class="team">
-    <h1 class="subtitle-1 grey--text">Team</h1>
+    <h1 class="subtitle-1 grey--text">تیم</h1>
     <v-container class="my-5">
       <v-row no-gutters>
         <v-col cols="12" sm="6" md="4" lg="3" v-for="(person,index) in team" :key="index">
@@ -17,7 +17,7 @@
             <v-card-actions>
               <v-btn text color="grey">
                 <v-icon small left>mdi-message</v-icon>
-                <span>Message</span>
+                <span>پیام</span>
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -33,7 +33,7 @@ export default {
   data(){
     return{
       team: [
-        { name: 'The Net Ninja', role: 'Web developer', avatar: '1' },
+        { name: 'حامد گرجی', role: 'طراح وب سایت', avatar: '1' },
         { name: 'Ryu', role: 'Graphic designer', avatar: '2' },
         { name: 'Chun Li', role: 'Web developer', avatar: '3' },
         { name: 'Gouken', role: 'Social media maverick', avatar: '4' },

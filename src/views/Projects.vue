@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <h1 class="subtitle-1 grey--text">Projects</h1>
+    <h1 class="subtitle-1 grey--text">پروژه ها</h1>
 
     <v-container class="my-5">
       <v-expansion-panels>
@@ -9,7 +9,7 @@
           <v-expansion-panel-content>
             <v-card flat>
               <v-card-text class="grey--text">
-                <div class="font-weight-bold">due to {{project.due}}</div>
+                <div class="font-weight-bold">تاریخ: {{project.due}}</div>
                 <div>{{project.content}}</div>
               </v-card-text>
             </v-card>
@@ -28,15 +28,15 @@ export default {
     return {
       projects: [
         {
-          title: 'Design a new website',
-          person: 'The Net Ninja',
-          due: '1st Jan 2019',
+          title: 'طراحی وب سایت جدید',
+          person: 'حامد گرجی',
+          due: '۱۴۰۰/۰۵/۱۴',
           status: 'ongoing',
-          content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'
+          content: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.'
         },
         {
           title: 'Design a new website.. again',
-          person: 'The Net Ninja',
+          person: 'حامد گرجی',
           due: '1st Jan 2019',
           status: 'ongoing',
           content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'
@@ -68,7 +68,7 @@ export default {
   computed: {
     myProjects() {
       return this.projects.filter(project =>{
-        return project.person === 'The Net Ninja'
+        return project.person === 'حامد گرجی'
       })
     }
   }

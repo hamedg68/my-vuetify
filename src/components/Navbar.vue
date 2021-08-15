@@ -1,14 +1,14 @@
 <template>
   <nav>
 
-    <v-snackbar v-model="snackbar" :timeout="4000" bottom color="success">Awesome! You added a new project.</v-snackbar>
+    <v-snackbar v-model="snackbar" :timeout="4000" bottom color="success">پروژه جدید اضافه شد!</v-snackbar>
 
     <v-app-bar flat app>
       <v-app-bar-nav-icon class="grey--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title class="text-uppercase grey--text">
-        <span class="font-weight-light">Todo</span>
-        <span>Hamed</span>
+        <span class="font-weight-light">مدیریت</span>
+        <span> پروژه</span>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -18,7 +18,7 @@
           <template v-slot:activator="{ on, attrs }">
             <v-btn color="grey" text v-bind="attrs" v-on="on">
               <v-icon>mdi-chevron-down</v-icon>
-              <span>Menu</span>
+              <span>منو</span>
             </v-btn>
           </template>
 
@@ -31,7 +31,7 @@
       </div>
 
       <v-btn text color="pink">
-        <span>Sign out</span>
+        <span>خروج</span>
         <v-icon right>mdi-exit-to-app</v-icon>
       </v-btn>
     </v-app-bar>
@@ -42,7 +42,7 @@
           <v-avatar size="100">
             <img src="../assets/avatar-1.png" alt="a">
           </v-avatar>
-          <p class="white--text subtitle-2 mt-1 text-center">the Hamed</p>
+          <p class="white--text subtitle-2 mt-1 text-center">حامد گرجی</p>
         </v-flex>
       </v-layout>
 
@@ -71,11 +71,11 @@ export default {
   },
   data() {
     return {
-      drawer: false,
+      drawer: true,
       links: [
-        {icon: 'mdi-view-dashboard', text: 'Dashboard', route: '/'},
-        {icon: 'mdi-folder', text: 'My Projects', route: '/projects'},
-        {icon: 'mdi-account-group', text: 'Team', route: '/team'},
+        {icon: 'mdi-view-dashboard', text: 'داشبورد', route: '/'},
+        {icon: 'mdi-folder', text: 'پروژه های من', route: '/projects'},
+        {icon: 'mdi-account-group', text: 'تیم', route: '/team'},
       ],
       offset : true,
       snackbar : false
