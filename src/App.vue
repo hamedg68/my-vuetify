@@ -33,6 +33,6 @@ export default {
 <style lang="scss">
 
 @import "~@/assets/sass/variables";
-
+@import '~vuetify/src/styles/settings/_variables.scss';
 
 </style>
