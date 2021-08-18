@@ -1,6 +1,5 @@
 <template>
   <nav>
-
     <v-snackbar v-model="snackbar" :timeout="4000" bottom color="success">پروژه جدید اضافه شد!</v-snackbar>
 
     <v-app-bar flat app>
@@ -64,10 +63,11 @@
 
 <script>
 import Popup from "@/components/Popup";
+
 export default {
   name: "Navbar",
-  components:{
-    'popup' : Popup
+  components: {
+    'popup': Popup
   },
   data() {
     return {
@@ -77,8 +77,8 @@ export default {
         {icon: 'mdi-folder', text: 'پروژه های من', route: '/projects'},
         {icon: 'mdi-account-group', text: 'تیم', route: '/team'},
       ],
-      offset : true,
-      snackbar : false
+      offset: true,
+      snackbar: false
     }
   }
 }
