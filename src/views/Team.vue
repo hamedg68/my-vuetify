@@ -4,6 +4,7 @@
     <v-container class="my-5">
       <v-row no-gutters>
         <v-col cols="12" sm="6" md="4" lg="3" v-for="(person,index) in team" :key="index">
+
           <v-card flat class="text-center ma-2">
             <v-responsive class="pt-4">
               <v-avatar size="100" class="grey lighten-2">
